@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/animations/implict_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_container.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 
@@ -7,9 +8,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double sizedBoxValue = 15;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.animation, size: 38,),
+        leading: Icon(Icons.animation, size: 38),
         title: Text(
           "Flutter Animations",
           style: TextStyle(
@@ -32,6 +34,18 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomAnimatedContainer(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Animated Box",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomAnimatedBox(),
                     ),
                   );
                 },

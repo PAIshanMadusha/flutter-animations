@@ -14,7 +14,13 @@ class _CustomAnimatedContainerState extends State<CustomAnimatedContainer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Animated Container",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: Center(
         child: GestureDetector(
           onTap: () {
