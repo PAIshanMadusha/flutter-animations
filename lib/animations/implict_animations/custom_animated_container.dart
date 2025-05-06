@@ -39,15 +39,7 @@ class _CustomAnimatedContainerState extends State<CustomAnimatedContainer> {
             ),
             curve: Curves.easeInOut,
             child: Center(
-              child: Text(
-                "Flutter With PAIshanMadusha",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
+              child: FlutterLogo(size: 70,)
             ),
           ),
         ),
