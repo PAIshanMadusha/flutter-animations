@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_button.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_container.dart';
+import 'package:flutter_animations/animations/implict_animations/custom_animated_list.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_opacity.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_padding.dart';
-import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -85,6 +86,18 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomAnimatedPadding(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Animated List",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomAnimatedList(),
                     ),
                   );
                 },
