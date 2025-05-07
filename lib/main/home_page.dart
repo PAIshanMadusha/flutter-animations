@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_physical_model.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_positioned.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_switcher.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_text_style.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_theme.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_tween.dart';
+import 'package:flutter_animations/animations/explicit_animations/details_page_animation.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_physical_model.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_positioned.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_switcher.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_text_style.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_theme.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_tween.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_box.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_button.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_container.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_list.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_opacity.dart';
-import 'package:flutter_animations/animations/implict_animations/custom_animated_padding.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_box.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_button.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_container.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_list.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_opacity.dart';
+import 'package:flutter_animations/animations/implicit_animations/custom_animated_padding.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -37,6 +38,25 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.all(25),
           child: Column(
             children: [
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Center(
+                  child: Text(
+                    "Implicit Animations",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: sizedBoxValue),
               CustomButton(
                 text: "Animated Container",
                 onTap: () {
@@ -176,6 +196,37 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomAnimatedTween(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Center(
+                  child: Text(
+                    "Explicit Animations",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Explicit Animation",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsPageAnimation(),
                     ),
                   );
                 },
