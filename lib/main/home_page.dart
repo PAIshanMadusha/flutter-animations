@@ -4,6 +4,7 @@ import 'package:flutter_animations/animations/implict_animations/custom_animated
 import 'package:flutter_animations/animations/implict_animations/custom_animated_switcher.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_text_style.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_theme.dart';
+import 'package:flutter_animations/animations/implict_animations/custom_animated_tween.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_button.dart';
@@ -163,6 +164,18 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomAnimatedTheme(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Animated Tween",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomAnimatedTween(),
                     ),
                   );
                 },
