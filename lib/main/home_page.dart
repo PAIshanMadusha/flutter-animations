@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_physical_model.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_positioned.dart';
+import 'package:flutter_animations/animations/implict_animations/custom_animated_switcher.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implict_animations/custom_animated_button.dart';
@@ -124,6 +125,18 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomAnimatedPositioned(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Animated Switcher",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomAnimatedSwitcher(),
                     ),
                   );
                 },
