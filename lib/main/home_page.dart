@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/animations/explicit_animations/custom_slide_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/details_page_animation.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_physical_model.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_positioned.dart';
@@ -227,6 +228,18 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => DetailsPageAnimation(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Slide Animation",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CustomSlideAnimation(),
                     ),
                   );
                 },
