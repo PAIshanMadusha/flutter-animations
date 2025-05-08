@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations/animations/explicit_animations/custom_loading_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/custom_rotation_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/custom_slide_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/details_page_animation.dart';
@@ -253,6 +254,19 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CustomRotationAnimation(),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Loading Animation",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder:
+                          (context) => CustomLoadingAnimation(percentage: 65),
                     ),
                   );
                 },
