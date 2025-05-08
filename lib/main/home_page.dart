@@ -3,6 +3,7 @@ import 'package:flutter_animations/animations/explicit_animations/custom_loading
 import 'package:flutter_animations/animations/explicit_animations/custom_rotation_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/custom_slide_animation.dart';
 import 'package:flutter_animations/animations/explicit_animations/details_page_animation.dart';
+import 'package:flutter_animations/animations/grid_animations/grid_home_page.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_physical_model.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_positioned.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_switcher.dart';
@@ -267,6 +268,37 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(
                       builder:
                           (context) => CustomLoadingAnimation(percentage: 65),
+                    ),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Center(
+                  child: Text(
+                    "Grid Animations",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Grid Animation",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GridHomePage(),
                     ),
                   );
                 },
