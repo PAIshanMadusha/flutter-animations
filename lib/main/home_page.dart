@@ -10,6 +10,7 @@ import 'package:flutter_animations/animations/implicit_animations/custom_animate
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_text_style.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_theme.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_tween.dart';
+import 'package:flutter_animations/animations/page_animations/first_page.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_button.dart';
@@ -297,9 +298,36 @@ class HomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => GridHomePage(),
+                    MaterialPageRoute(builder: (context) => GridHomePage()),
+                  );
+                },
+              ),
+              SizedBox(height: sizedBoxValue),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white, width: 2),
+                ),
+                child: Center(
+                  child: Text(
+                    "Page Animations",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
                     ),
+                  ),
+                ),
+              ),
+              SizedBox(height: sizedBoxValue),
+              CustomButton(
+                text: "Page Animation",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FirstPage()),
                   );
                 },
               ),
