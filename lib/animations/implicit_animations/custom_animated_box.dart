@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
 
