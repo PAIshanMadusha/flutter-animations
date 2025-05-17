@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
+import 'package:flutter_animations/reusable_widgets/custom_button.dart';
 
 class CustomAnimatedBox extends StatefulWidget {
   const CustomAnimatedBox({super.key});

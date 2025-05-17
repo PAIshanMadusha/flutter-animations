@@ -11,7 +11,7 @@ import 'package:flutter_animations/animations/implicit_animations/custom_animate
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_theme.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_tween.dart';
 import 'package:flutter_animations/animations/page_animations/first_page.dart';
-import 'package:flutter_animations/reusable_widgets.dart/custom_button.dart';
+import 'package:flutter_animations/reusable_widgets/custom_button.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_box.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_button.dart';
 import 'package:flutter_animations/animations/implicit_animations/custom_animated_container.dart';
